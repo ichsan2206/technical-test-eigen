@@ -1,0 +1,134 @@
+.container-article{
+    margin-top: 9vh;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.img-article-card{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    background-color: white;
+}
+
+.card-container:hover{
+    -webkit-transition: all 0.5s 0s ease !important;
+    -moz-transition: all 0.5s 0s ease !important;
+    -o-transition: all 0.5s 0s ease !important;
+    transition: all 0.5s 0s ease !important;
+    width: 305px !important;
+}
+
+.card-container{
+margin-top: 10px;
+}
+
+.date-card{
+    margin-right: 12px;
+    font-weight:500;
+    font-size: small;
+}
+
+.author-card{
+    width: 150px;
+    font-weight:500;
+    display: flex;
+    align-items: flex-start;
+}
+
+.author-card p{
+    font-weight:500;
+    width: 160px;
+    margin-left: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.title-card{
+    width: 100% !important;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.desc-card{
+    margin-top: 0px !important;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.container-title{
+    margin: 0px !important;
+}
+
+.container-detail{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.img-detail{
+    object-fit: cover;
+    object-position: top;
+    max-width: 100%;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-content{
+    max-width: 100%;
+    margin-top: 3vh;
+    padding-top: 30px;
+    background-color: white;
+}
+
+.container-content h1{
+    text-align: center;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.date-authot-detail{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.content-detail{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.author-card-detail p{
+    font-weight:500;
+    margin-left: 5px;
+}
+
+.author-card-detail{
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-list-article{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .card-container{
+        margin-top: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
