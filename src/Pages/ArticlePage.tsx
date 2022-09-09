@@ -13,21 +13,22 @@ export default function ArticlePage() {
     
     let apiKey:string = "ac4a157fbf67445fb284b7282de0feae";
 
-    const getArticles = async () =>{
-        try {
-            await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
-            .then(res => res.json())
-            .then(result => {
-                setData(result.articles)
-            });
-            setLoading(false)
-        } catch (error) {
-            console.log(error);
-            
-        }
-    }
+
 
     useEffect(()=>{
+        const getArticles = async () =>{
+            try {
+                await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
+                .then(res => res.json())
+                .then(result => {
+                    setData(result.articles)
+                });
+                setLoading(false)
+            } catch (error) {
+                console.log(error);
+                
+            }
+        }
         getArticles()
     },[])
 
