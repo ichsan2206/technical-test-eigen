@@ -8,7 +8,8 @@ interface article{
   urlToImage: string,
   publishedAt: string,
   author: string,
-  content: string
+  content: string,
+  description: string
 }
 
 export default function DetailArticle() {
@@ -19,11 +20,11 @@ export default function DetailArticle() {
   const [index, setIndex] = useState<any>();
   const [loading, setLoading] = useState(true)
 
-  let apiKey = "ac4a157fbf67445fb284b7282de0feae";
+  let apiKey:string = "ac4a157fbf67445fb284b7282de0feae";
   
  
   useEffect(()=>{
-    const getArticles = async () =>{
+    const getDetailArticle = async () =>{
       try {
           setIndex(params.index)
           await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
@@ -37,7 +38,7 @@ export default function DetailArticle() {
           
       }
   }  
-    getArticles()
+  getDetailArticle()
   },[index])
 
   return (
@@ -48,13 +49,13 @@ export default function DetailArticle() {
               : <h1>{data?.title}</h1>}
               <img className='img-detail' src={data?.urlToImage} alt=''></img>
               <div className='date-authot-detail'>
-              <p className='date-card'>{data?.publishedAt.substring(0, 10)}</p>
+                <p className='date-card'>{data?.publishedAt.substring(0, 10)}</p>
               <div className='author-card-detail'>
-              <FormOutlined style={{fontSize: 17}}/><p>{data?.author}</p>
+                <FormOutlined style={{fontSize: 17}}/>{data?.author? <p>{data?.author}</p>:<p>Guest</p>}
               </div>
               </div>
               <div className='content-detail'>
-              <p>{data?.content}</p>
+                {data?.content? <p>{data?.content}</p>:<p>{data?.description}</p>}
               </div>
             </div>
         </div>
